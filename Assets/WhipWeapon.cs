@@ -11,7 +11,9 @@ public class WhipWeapon : MonoBehaviour
     [SerializeField] GameObject leftWhipObject;
     [SerializeField] GameObject rightWhipObject;
 
+    [SerializeField] Vector2 whipAttackSize = new Vector2(4f, 2f);
     playerMove playerMove;
+    [SerializeField] int whipDamage = 1;
 
     private void Awake() {
         playerMove = GetComponentInParent<playerMove>();
@@ -31,8 +33,24 @@ public class WhipWeapon : MonoBehaviour
 
         if (playerMove.lastHorizontalVector > 0) {
             rightWhipObject.SetActive(true);
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(rightWhipObject.transform.position, whipAttackSize, 0f);
+            ApplyDamage(colliders);
         } else {
             leftWhipObject.SetActive(true);
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(leftWhipObject.transform.position, whipAttackSize, 0f);
+            ApplyDamage(colliders);
+        }
+    }
+
+    private void ApplyDamage(Collider2D[] colliders) {
+        for (int i = 0; i < colliders.Length; i++) {
+            Enemy e = colliders[i].GetComponent<Enemy>();
+            if (e != null) {
+        Debug.Log("SHOULD ATTACKED");
+                 
+                colliders[i].GetComponent<Enemy>().TakeDamage(whipDamage); 
+
+            }
         }
     }
 }
