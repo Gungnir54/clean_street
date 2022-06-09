@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Character : MonoBehaviour
 
         if(currentHp <= 0) {
             Debug.Log("DEAD GAME OVER");
+            SceneManager.LoadScene("GameOver");
         }
 
 
