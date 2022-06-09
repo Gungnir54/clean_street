@@ -44,12 +44,10 @@ public class WhipWeapon : MonoBehaviour
 
     private void ApplyDamage(Collider2D[] colliders) {
         for (int i = 0; i < colliders.Length; i++) {
-            Enemy e = colliders[i].GetComponent<Enemy>();
+            IDamageable e = colliders[i].GetComponent<IDamageable>();
             if (e != null) {
-        Debug.Log("SHOULD ATTACKED");
                  
-                colliders[i].GetComponent<Enemy>().TakeDamage(whipDamage); 
-
+                e.TakeDamage(whipDamage);
             }
         }
     }
