@@ -903,6 +903,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1489933108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1489933109}
+  - component: {fileID: 1489933110}
+  m_Layer: 0
+  m_Name: wpn-ThrowingKnife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1489933109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489933108}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2075367528}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1489933110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489933108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f1465f0ed1a7281acb888df85b238b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAttack: 1
+  knifePrefab: {fileID: 5738783062404470964, guid: e76c6079633b424caae4006c8fe169c3, type: 3}
 --- !u!1 &1561247347 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2930911116005638684, guid: 3ecaccade6358c099a1d0ada4521df08, type: 3}
@@ -1075,8 +1121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3066949223318680933, guid: 3ceb643a53da5deb5992ec3f7b3874d3, type: 3}
-  spawnArea: {x: 0, y: 0}
-  spawnTimer: 10
+  spawnArea: {x: 7, y: 7}
+  spawnTimer: 1
   player: {fileID: 2075367525}
 --- !u!4 &1918720924
 Transform:
@@ -1204,6 +1250,7 @@ GameObject:
   - component: {fileID: 2075367529}
   - component: {fileID: 2075367530}
   - component: {fileID: 2075367531}
+  - component: {fileID: 2075367532}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -1264,6 +1311,7 @@ Transform:
   - {fileID: 213330492}
   - {fileID: 2144925778}
   - {fileID: 519420032}
+  - {fileID: 1489933109}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1321,6 +1369,20 @@ MonoBehaviour:
   maxHp: 1000
   currentHp: 1000
   hpBar: {fileID: 0}
+--- !u!114 &2075367532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075367525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5b2b7c11dec395ba279a79599c0906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  experience: 0
 --- !u!1 &2144925775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875d5c84f3f5cb80990c33a8b0523196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 1430404001}
+  bar: {fileID: 488185709}
 --- !u!212 &2144925777
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1529,6 +1591,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6937107145867994612, guid: dd129542b7d68473aa56f79dfd0c7d07, type: 3}
+
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
