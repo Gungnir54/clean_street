@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abb9103a11be80e17930d4b64a98f61c
-      internalID: -97773708
+      spriteID: dbee43dd8b9c1e9d8942447aca290daa
+      internalID: 1961598877
       vertices: []
       indices: 
       edges: []
@@ -151,29 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c7af77019402399a9a2fd3ace55088d
-      internalID: -2049835820
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_legumes_7
-      rect:
-        serializedVersion: 2
-        x: 1198
-        y: 2599
-        width: 405
-        height: 404
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0da059eeb38678d2a7094f473913794
-      internalID: 1470460936
+      spriteID: 99c0e7120201595aabe0e03b4a566b6d
+      internalID: 1427876219
       vertices: []
       indices: 
       edges: []
@@ -193,8 +172,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44024378ea792abe08b1757e368c7141
-      internalID: 1812759398
+      spriteID: d56736f490ef1d6f785fa1eaec5f17a1
+      internalID: 1420507077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_legumes_7
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 2599
+        width: 405
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1988f0371d2b366bb008d2176e9a21a
+      internalID: -318887122
       vertices: []
       indices: 
       edges: []
@@ -210,14 +210,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprite_legumes_2: -2049835820
-      sprite_legumes_4: 640956107
-      sprite_legumes_1: -1572322416
-      sprite_legumes_6: -444095076
-      sprite_legumes_3: 1245499429
-      sprite_legumes_0: -97773708
-      sprite_legumes_5: 1812759398
-      sprite_legumes_7: 1470460936
+      sprite_legumes_2: 1427876219
+      sprite_legumes_4: -1865191192
+      sprite_legumes_1: 1583413124
+      sprite_legumes_6: 1851890934
+      sprite_legumes_3: 461114593
+      sprite_legumes_0: 1961598877
+      sprite_legumes_5: 1420507077
+      sprite_legumes_7: -318887122
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
